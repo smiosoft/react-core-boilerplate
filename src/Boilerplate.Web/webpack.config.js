@@ -66,7 +66,9 @@ module.exports = (env, argv) => {
       runtimeChunk: true,
     },
     devServer: {
+      contentBase: path.join(__dirname, 'wwwroot'),
       historyApiFallback: true,
+      port: 9000,
       compress: true,
       quiet: true,
       hot: true,
