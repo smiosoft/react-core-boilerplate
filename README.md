@@ -6,9 +6,13 @@ Preconfigured solution for building a Single Page Application project with ASP.N
 
 [Live Demo](https://smiosoft.github.io/react-core-boilerplate)
 
-## Usage
+## Quick Start
 
-Template repository - generate a new repository with the same directory structure and files.
+1. `cd ./src/Boilerplate.Web` - Move to the project directory
+2. `npm install` - Install module dependencies
+3. `npm run start` - Start application
+
+## Usage
 
 ### Node
 
@@ -32,73 +36,25 @@ MSBuild triggers are defined in the project `.csproj` file.
 ## Directory Structure
 
 ```markdown
-|   .gitattributes
-|   .gitignore
-|   Boilerplate.sln
-|   LICENSE
-|   README.md
-|
-+---build
-|       azure-pipelines.yml
-|
-+---docs
-|   \---assets
-|           project-title.png
-|
-\---src
+|   Boilerplate.sln                     # Visual Studio Solution
++---build                               # Any scripts related to building the project
++---docs                                # Any documentation files and assets
+\---src                                 # Any projects related to the source code
     \---Boilerplate.Web
-        |   .babelrc
-        |   .eslintrc
-        |   .stylelintrc
-        |   appsettings.json
-        |   Boilerplate.Web.csproj
-        |   package-lock.json
-        |   package.json
+        |   .babelrc                    # Babel configuration
+        |   .eslintrc                   # ESLint configuration
+        |   .stylelintrc                # Stylelint configuration
+        |   appsettings.json            # Application configuration
+        |   Boilerplate.Web.csproj      # ASP.NET Core Project
+        |   package.json                # Packages configuration
         |   Program.cs
         |   Startup.cs
-        |   webpack.config.js
-        |
+        |   webpack.config.js           # Webpack configuration
         +---ClientApp
-        |   |   index.jsx
-        |   |   template.html
-        |   |
+        |   |   index.jsx               # Application entrypoint
+        |   |   template.html           # HTML template
         |   +---assets
-        |   |   \---img
-        |   |           favicon.png
-        |   |
         |   \---components
-        |       \---App
-        |           |   index.jsx
-        |           |
-        |           +---assets
-        |           |   +---fonts
-        |           |   |       open-sans-v16-latin-regular.woff
-        |           |   |       open-sans-v16-latin-regular.woff2
-        |           |   |
-        |           |   \---icons
-        |           |           logo.svg
-        |           |
-        |           +---components
-        |           |   |   Counter.jsx
-        |           |   |   Home.jsx
-        |           |   |   Routes.jsx
-        |           |   |
-        |           |   +---layout
-        |           |   |   |   index.jsx
-        |           |   |   |
-        |           |   |   \---components
-        |           |   |           Footer.jsx
-        |           |   |           Header.jsx
-        |           |   |           Main.jsx
-        |           |   |
-        |           |   \---shared
-        |           |           Loading.jsx
-        |           |
-        |           \---utils
-        |               \---style
-        |                       globalStyle.js
-        |                       media.js
-        |                       variables.js
-        |
-        \---wwwroot
+        |       \---App                 # Demo Application
+        \---wwwroot                     # Webpack build output
 ```
