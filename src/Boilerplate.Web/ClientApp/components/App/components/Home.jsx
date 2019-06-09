@@ -16,7 +16,7 @@ const Home = () => (
     <Helmet>
       <title>Home</title>
     </Helmet>
-    <h2>Boilerplate for building React apps hosted with ASP.NET Core.</h2>
+    <h2>Boilerplate for building React apps hosted with ASP.NET Core</h2>
     <Logo />
   </Container>
 );

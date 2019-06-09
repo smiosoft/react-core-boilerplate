@@ -8,6 +8,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 `;
 
 const Content = styled.div`
@@ -29,10 +30,10 @@ const Content = styled.div`
 
 const Counter = () => {
   const [counter, setCounter] = useState(0);
-  const increaseCounter = () => {
+  const incrementCounter = () => {
     setCounter(counter + 1);
   };
-  const decreaseCounter = () => {
+  const decrementCounter = () => {
     setCounter(counter - 1);
   };
 
@@ -41,11 +42,11 @@ const Counter = () => {
       <Helmet>
         <title>Counter</title>
       </Helmet>
-      <h2>Never seen before counter!</h2>
+      <h2>Simple Counter</h2>
       <Content>
-        <button type="button" onClick={decreaseCounter}>-</button>
+        <button type="button" onClick={decrementCounter}>-</button>
         <h1>{counter}</h1>
-        <button type="button" onClick={increaseCounter}>+</button>
+        <button type="button" onClick={incrementCounter}>+</button>
       </Content>
     </Container>
   );
