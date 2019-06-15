@@ -19,7 +19,7 @@ const Link = styled.a`
 
 const AppFooter = () => (
   <Footer>
-    <Link href="https://github.com/smiosoft/react-core-boilerplate">Github</Link>
+    <Link href="https://github.com/smiosoft/react-core-boilerplate">View Project Source</Link>
   </Footer>
 );
 

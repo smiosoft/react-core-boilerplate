@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { APP_SIZE, PRIMARY } from '../../../utils/style/variables';
 
 const Main = styled.main`
-  height: ${APP_SIZE.main};
+  min-height: ${APP_SIZE.main};
   background: ${PRIMARY.background};
   display: flex;
   justify-content: center;
