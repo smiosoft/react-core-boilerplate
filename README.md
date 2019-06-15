@@ -92,7 +92,7 @@ MSBuild triggers are defined in the project `.csproj` file.
         |           |   |           Header.jsx      # Example Header
         |           |   |           Main.jsx        # Example Main
         |           |   |
-        |           |   \---shared                  # App
+        |           |   \---shared
         |           |           Loading.jsx         # Example Loading
         |           |
         |           \---utils                       # App-scope utilities
