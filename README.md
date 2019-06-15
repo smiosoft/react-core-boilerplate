@@ -16,17 +16,17 @@ Preconfigured solution for building a Single Page Application project with ASP.N
 
 ### Node
 
-Node (`npm`) commands are defined in `package.json`, which is located with the project (`src/*/*.csproj`).
+Node (`npm`) commands are defined in `package.json`, which is located with the project (`Boilerplate.Web.csproj`).
 
 | Command         | Description                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `npm install`   | Install module dependencies to the `node_modules` directory                                                              |
-| `npm run start` | Start the [webpack-dev-server](https://github.com/webpack/webpack-dev-server) server running on `http://localhost:9000`  |
-| `nom run build` | Builds the application with [webpack](https://webpack.js.org/) for production environment; output is `wwwroot` directory |
+| `npm run start` | Start the [webpack-dev-server](https://github.com/webpack/webpack-dev-server); running on `http://localhost:9000`  |
+| `nom run build` | Build with [webpack](https://webpack.js.org/); output to `wwwroot` directory |
 
 ### MSBuild
 
-MSBuild triggers are defined in the project `.csproj` file.
+MSBuild triggers are defined in the project file (`Boilerplate.Web.csproj`).
 
 | Target       | Condition                               | Action                  |
 | ------------ | --------------------------------------- | ----------------------- |
