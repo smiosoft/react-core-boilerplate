@@ -11,13 +11,23 @@ const Container = styled.div`
   text-align: center;
 `;
 
+const Section = styled.section`
+
+  svg {
+    width: 20rem;
+    height: 20rem;
+  }
+`;
+
 const Home = () => (
   <Container>
     <Helmet>
       <title>Home</title>
     </Helmet>
-    <h2>Boilerplate for building React apps hosted with ASP.NET Core</h2>
-    <Logo />
+    <h1>Boilerplate for building React apps hosted with ASP.NET Core</h1>
+    <Section>
+      <Logo />
+    </Section>
   </Container>
 );
 

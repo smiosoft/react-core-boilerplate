@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
 import media from '../utils/style/media';
+import { PRIMARY } from '../utils/style/variables';
 
 const Container = styled.div`
   display: flex;
@@ -11,7 +12,7 @@ const Container = styled.div`
   text-align: center;
 `;
 
-const Content = styled.div`
+const Section = styled.section`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,13 +20,26 @@ const Content = styled.div`
   ${media.medium`
     flex-direction: column-reverse;
   `};
+`;
 
-  button {
-    width: 3rem;
-    height: 3rem;
-    margin: 0 1rem;
-    cursor: pointer;
+const Button = styled.button`
+  width: 3rem;
+  height: 3rem;
+  color: ${PRIMARY.colour};
+  font-size: larger;
+  background: ${PRIMARY.background};
+  border: 2px solid ${PRIMARY.colour};
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background: ${PRIMARY.colour};
+    color: ${PRIMARY.background};
   }
+`;
+
+const Count = styled.h1`
+  width: 5rem;
 `;
 
 const Counter = () => {
@@ -42,12 +56,12 @@ const Counter = () => {
       <Helmet>
         <title>Counter</title>
       </Helmet>
-      <h2>Simple Counter</h2>
-      <Content>
-        <button type="button" onClick={decrementCounter}>-</button>
-        <h1>{counter}</h1>
-        <button type="button" onClick={incrementCounter}>+</button>
-      </Content>
+      <h1>Simple Counter</h1>
+      <Section>
+        <Button type="button" onClick={decrementCounter}>-</Button>
+        <Count>{counter}</Count>
+        <Button type="button" onClick={incrementCounter}>+</Button>
+      </Section>
     </Container>
   );
 };
