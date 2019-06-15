@@ -4,21 +4,38 @@
 
 ---
 
-Preconfigured solution for building a Single Page Application project with ASP.NET Core and React.
+Preconfigured solution for building a SPA with ASP.NET Core and React.
 
 [Live Demo](https://smiosoft.github.io/react-core-boilerplate)
 
-## Quick Start
+## Overview
 
-1. `cd ./src/Boilerplate.Web` - Move to the project directory
-2. `npm install` - Install module dependencies
-3. `npm run start` - Start application
+Generate a new repository with the same directory structure and files.
+
+### Prerequisite
+
+- [.NET Core](https://dotnet.microsoft.com/download)
+- [Node.js](https://nodejs.org/en/)
+
+### Quick Start
+
+```shell
+cd ./src/Boilerplate.Web
+npm install
+npm run start
+```
+
+### Features
+
+- Optimised Webpack configuration
+- Preconfigured ESLint using [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+- Preconfigured hot reloading using [react-hot-loader](https://www.npmjs.com/package/react-hot-loader)
+- Lazy Loading and Code Splitting
+- Offline support
 
 ## Usage
 
 ### Node
-
-Node (`npm`) commands are defined in `package.json`, which is located with the project (`Boilerplate.Web.csproj`).
 
 | Command         | Description                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -27,8 +44,6 @@ Node (`npm`) commands are defined in `package.json`, which is located with the p
 | `nom run build` | Build with [webpack](https://webpack.js.org/); output to `wwwroot` directory |
 
 ### MSBuild
-
-MSBuild triggers are defined in the project file (`Boilerplate.Web.csproj`).
 
 | Target       | Condition                               | Action                  |
 | ------------ | --------------------------------------- | ----------------------- |
