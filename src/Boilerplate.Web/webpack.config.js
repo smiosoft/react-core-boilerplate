@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
   const { mode } = argv;
 
   return {
-    entry: './ClientApp/index.jsx',
+    entry: path.resolve(__dirname, 'ClientApp', 'index.jsx'),
     output: {
       filename: '[name].[hash].js',
       chunkFilename: '[name].[chunkhash].chunk.js',
@@ -146,9 +146,10 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './ClientApp/template.html',
-        filename: './index.html',
-        favicon: './ClientApp/assets/img/favicon.png',
+        template: path.join(__dirname, 'ClientApp', 'template.html'),
+        filename: 'index.html',
+        favicon: path.join(__dirname, 'ClientApp/assets/img', 'favicon.png'),
+        output: path.resolve(__dirname, 'wwwroot'),
         minify: {
           removeComments: true,
           collapseWhitespace: true,
@@ -186,7 +187,7 @@ module.exports = (env, argv) => {
         background_color: '#212121',
         icons: [
           {
-            src: path.resolve('./ClientApp/assets/img/favicon.png'),
+            src: path.join(__dirname, 'ClientApp/assets/img', 'favicon.png'),
             sizes: [36, 48, 72, 96, 144, 192, 512],
             ios: true,
           },
