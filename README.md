@@ -1,4 +1,4 @@
-![React Core Boilerplate](./docs/assets/project-title.png)
+![React Core Boilerplate](./docs/.assets/project-title.png)
 
 [![Build Status](https://dev.azure.com/smiosoft/react-core-boilerplate/_apis/build/status/smiosoft.react-core-boilerplate?branchName=master)](https://dev.azure.com/smiosoft/react-core-boilerplate/_build/latest?definitionId=2&branchName=master)
 
