@@ -4,10 +4,13 @@ import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
 
 import GlobalStyle from './utils/style/globalStyle';
-import { Header, Main, Footer } from './components/layout';
-import Routes from './components/Routes';
-
-import 'modern-normalize/modern-normalize.css';
+import {
+  Footer,
+  Header,
+  Main,
+  Navbar,
+} from './components/layout';
+import PageRouter from './components/routing/PageRouter';
 
 const App = () => {
   if ('serviceWorker' in navigator) {
@@ -23,17 +26,19 @@ const App = () => {
   }
 
   return (
-    <React.Fragment>
+    <BrowserRouter>
       <Helmet titleTemplate="%s / React Core Boilerplate" defaultTitle="React Core Boilerplate" />
       <GlobalStyle />
-      <BrowserRouter>
-        <Header />
-        <Main>
-          <Routes />
-        </Main>
-        <Footer />
-      </BrowserRouter>
-    </React.Fragment>
+      <Header>
+        <Navbar />
+      </Header>
+      <Main>
+        <PageRouter />
+      </Main>
+      <Footer>
+        Test
+      </Footer>
+    </BrowserRouter>
   );
 };
 
