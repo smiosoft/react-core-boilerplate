@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { APP_SIZE, PRIMARY } from '../../utils/style/variables';
+import { APP_SIZE, PRIMARY, SECONDARY } from '../../utils/style/variables';
 import types from '../../types';
 
 const propTypes = {
@@ -14,7 +14,11 @@ const defaultProps = {
 
 const Wrapper = styled.footer`
   height: ${APP_SIZE.footer};
-  background-color: ${PRIMARY.background};
+  background-color: ${SECONDARY.background};
+  border-top: 1px solid ${PRIMARY.colour};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Footer = ({ children }) => (

@@ -5,16 +5,16 @@ import { NavLink } from 'react-router-dom';
 import { PRIMARY } from '../../utils/style/variables';
 
 const Wrapper = styled.nav`
-  margin: auto auto .35rem auto;
+  margin: auto auto .6rem auto;
+`;
 
-  a {
-    padding: .25rem 1rem;
+const Link = styled(NavLink)`
+    padding: .5rem 2rem;
     border: 1px solid transparent;
     text-decoration: none;
     color: ${PRIMARY.colour};
-  }
 
-  .active {
+    &.active {
     background: ${PRIMARY.background};
     border-color: ${PRIMARY.colour} ${PRIMARY.colour} transparent;
     border-radius: 3px 3px 0 0;
@@ -23,8 +23,8 @@ const Wrapper = styled.nav`
 
 const Navbar = () => (
   <Wrapper>
-    <NavLink exact to="/">Home</NavLink>
-    <NavLink to="/counter">Counter</NavLink>
+    <Link exact to="/">Home</Link>
+    <Link exact to="/counter">Counter</Link>
   </Wrapper>
 );
 

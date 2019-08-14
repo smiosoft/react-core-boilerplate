@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import media from '../../utils/style/media';
+
 const propTypes = {
   text: PropTypes.string.isRequired,
 };
@@ -14,8 +16,11 @@ const Wrapper = styled.div`
 
 const Text = styled.h1`
   margin: 0;
-  line-height: 1;
-  font-size: 5em;
+  font-size: 4em;
+
+  ${media.small`
+  font-size: 12vw;
+  `};
 `;
 
 const Title = ({ text }) => (

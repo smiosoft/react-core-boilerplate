@@ -11,6 +11,7 @@ import {
   Navbar,
 } from './components/layout';
 import PageRouter from './components/routing/PageRouter';
+import { GitHub } from './components/shared/icons';
 
 const App = () => {
   if ('serviceWorker' in navigator) {
@@ -36,7 +37,9 @@ const App = () => {
         <PageRouter />
       </Main>
       <Footer>
-        Test
+        <a href="https://github.com/smiosoft/react-core-boilerplate" aria-label="github" target="_blank" rel="noopener noreferrer">
+          <GitHub fill="white" height="2rem" />
+        </a>
       </Footer>
     </BrowserRouter>
   );
