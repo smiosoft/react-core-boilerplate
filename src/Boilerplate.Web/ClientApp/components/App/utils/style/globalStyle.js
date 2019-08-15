@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import 'modern-normalize/modern-normalize.css';
+
 import { PRIMARY } from './variables';
 import woff2 from '../../assets/fonts/open-sans-v16-latin-regular.woff2';
 import woff from '../../assets/fonts/open-sans-v16-latin-regular.woff';

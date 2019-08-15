@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
-import media from '../utils/style/media';
-import { PRIMARY } from '../utils/style/variables';
+import { PRIMARY } from '../../utils/style/variables';
+import media from '../../utils/style/media';
+import { Page } from '../layout';
+import { Title } from '../shared';
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+const Italics = styled.i`
   text-align: center;
 `;
 
@@ -16,10 +14,16 @@ const Section = styled.section`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 
-  ${media.medium`
+  ${media.small`
     flex-direction: column-reverse;
   `};
+`;
+
+const Count = styled.h1`
+  width: 5rem;
+  text-align: center;
 `;
 
 const Button = styled.button`
@@ -38,31 +42,19 @@ const Button = styled.button`
   }
 `;
 
-const Count = styled.h1`
-  width: 5rem;
-`;
-
 const Counter = () => {
   const [counter, setCounter] = useState(0);
-  const incrementCounter = () => {
-    setCounter(counter + 1);
-  };
-  const decrementCounter = () => {
-    setCounter(counter - 1);
-  };
 
   return (
-    <Container>
-      <Helmet>
-        <title>Counter</title>
-      </Helmet>
-      <h1>Simple Counter</h1>
+    <Page title="Counter">
+      <Title text="Counter" />
+      <Italics>Simple counter app.</Italics>
       <Section>
-        <Button type="button" onClick={decrementCounter}>-</Button>
+        <Button type="button" onClick={() => setCounter(counter - 1)}>-</Button>
         <Count>{counter}</Count>
-        <Button type="button" onClick={incrementCounter}>+</Button>
+        <Button type="button" onClick={() => setCounter(counter + 1)}>+</Button>
       </Section>
-    </Container>
+    </Page>
   );
 };
 
