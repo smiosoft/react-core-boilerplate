@@ -39,7 +39,7 @@ npm run start
 | Command         | Description                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `npm run start` | Start the [webpack-dev-server](https://github.com/webpack/webpack-dev-server) on `http://localhost:9000`  |
-| `nom run build` | Build with [webpack](https://webpack.js.org/); output to `wwwroot` directory |
+| `nom run build` | Build with [webpack](https://webpack.js.org/) and output to `wwwroot` directory |
 
 ### MSBuild
 
