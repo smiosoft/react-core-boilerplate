@@ -6,6 +6,8 @@ _Pre-configured solution for building a SPA with ASP.NET Core and React._
 
 ![React Core Boilerplate](./docs/.assets/project-title.png)
 
+![React Core Boilerplate Lighthouse Score](./docs/.assets/project-screenshot.png)
+
 ## Overview
 
 [Live Demo](https://smiosoft.github.io/react-core-boilerplate)
