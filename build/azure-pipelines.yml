@@ -5,20 +5,28 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  project: './src/Boilerplate.Web/'
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
-- task: NodeTool@0
+- task: NuGetToolInstaller@1
+  displayName: 'Install NuGet tool'
+
+- task: NuGetCommand@2
+  displayName: 'Restore solution'
   inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+    restoreSolution: '$(solution)'
 
-- script: |
-    cd $(project)
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+- task: DotNetCoreCLI@2
+  displayName: 'Publish web application'
+  inputs:
+    command: 'publish'
+    arguments: '--nologo --no-restore --configuration $(buildConfiguration) --output $(build.artifactStagingDirectory)'
 
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+- task: PublishBuildArtifacts@1
+  displayName: 'Save build artifacts'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
