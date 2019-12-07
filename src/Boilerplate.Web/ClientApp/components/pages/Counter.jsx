@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 `;
 
 const Section = styled.section`
@@ -23,8 +24,7 @@ const Section = styled.section`
 
 const Value = styled.div`
   min-width: 5rem;
-  padding: 0 1rem;
-  text-align: center;
+  padding: 1rem;
   font-size: x-large;
 `;
 
