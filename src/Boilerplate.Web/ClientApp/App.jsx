@@ -6,10 +6,15 @@ import styled from 'styled-components';
 
 import history from './lib/history';
 import GlobalStyle from './GlobalStyle';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import AppRouter from './components/routing/AppRouter';
 
 const Wrapper = styled.div`
   height: 100vh;
-  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 `;
 
 const App = () => {
@@ -31,7 +36,9 @@ const App = () => {
       <Helmet titleTemplate="%s / React Core Boilerplate" defaultTitle="React Core Boilerplate" />
       <GlobalStyle />
       <Router history={history}>
-        <h1>Test</h1>
+        <Navbar />
+        <AppRouter />
+        <Footer />
       </Router>
     </Wrapper>
   );

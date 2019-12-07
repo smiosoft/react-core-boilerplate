@@ -73,6 +73,11 @@ module.exports = (env, argv) => {
             test(module) {
               return module.size() > 160000;
             },
+            name(module, chunks, cacheGroupKey) {
+              const moduleFileName = module.identifier().split('/').reduceRight((item) => item);
+              const allChunksNames = chunks.map((item) => item.name).join('~');
+              return `${cacheGroupKey}-${allChunksNames}-${moduleFileName}`;
+            },
             priority: 30,
             minChunks: 1,
             reuseExistingChunk: true,

@@ -331,4 +331,5 @@ ASALocalRun/
 
 # React build outputs
 **/wwwroot/*
+!**/wwwroot/fonts/
 !**/wwwroot/CNAME

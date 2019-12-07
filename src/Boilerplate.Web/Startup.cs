@@ -31,10 +31,6 @@ namespace Boilerplate.Web
             app.UseSpa(spa =>
             {
                 spa.Options.SourcePath = ".";
-                if (env.IsDevelopment())
-                {
-                    spa.UseReactDevelopmentServer(npmScript: "start");
-                }
             });
         }
     }

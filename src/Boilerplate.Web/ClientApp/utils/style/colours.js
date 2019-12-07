@@ -1,7 +1,18 @@
+import random from '../random';
+
 export const PRIMARY = {
   background: '#212121',
   colour: '#fff',
-  hover: '#000',
+  highlight: random.fromList([
+    '#EB156C',
+    '#D615EB',
+    '#1571EB',
+    '#15E9EB',
+    '#16EB15',
+    '#EBD515',
+  ]),
 };
 
-export default { PRIMARY };
+export const SECONDARY = {
+  background: '#000',
+};

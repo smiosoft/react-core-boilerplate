@@ -3,8 +3,8 @@ import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize/modern-normalize.css';
 
 import { PRIMARY } from './utils/style/colours';
-import woff2 from './assets/fonts/open-sans-v16-latin-regular.woff2';
-import woff from './assets/fonts/open-sans-v16-latin-regular.woff';
+import woff2 from '../wwwroot/fonts/open-sans-v16-latin-regular.woff2';
+import woff from '../wwwroot/fonts/open-sans-v16-latin-regular.woff';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -25,6 +25,8 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeSpeed;
     word-wrap: break-word;
+    padding: 0;
+    margin: 0;
   }
 `;
 
