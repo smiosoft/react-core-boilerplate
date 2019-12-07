@@ -30,10 +30,24 @@ _Pre-configured solution for building a SPA with ASP.NET Core and React._
 
 ### Quick Start
 
+Run the following commands to start the [`webpack-dev-server`](https://github.com/webpack/webpack-dev-server):
+
 ```shell
+cd ./src/Boilerplate.Web/
 npm install
 npm run start
 ```
+
+### Build
+
+Run the following commands to build the app with [`webpack`](https://github.com/webpack/webpack):
+
+```shell
+cd ./src/Boilerplate.Web/
+npm run build
+```
+
+Build artifact can be found in the `wwwroot` folder.
 
 ## Contributing
 
