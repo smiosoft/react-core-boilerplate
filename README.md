@@ -19,12 +19,13 @@ _Pre-configured solution for building a SPA with ASP.NET Core and React._
 - PWA and offline support
 - SEO
 - Hot reloading
+- Azure pipelines
 
-## Getting Started
+## Usage
 
 ### Prerequisites
 
-- [.NET Core](https://dotnet.microsoft.com/download/dotnet-core/)
+- [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/)
 - [Node.js](https://nodejs.org/en/download/)
 
 ### Quick Start
@@ -34,18 +35,8 @@ npm install
 npm run start
 ```
 
-## Usage
+## Contributing
 
-### Node
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-| Command         | Description                                                                                                              |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `npm run start` | Start the [webpack-dev-server](https://github.com/webpack/webpack-dev-server) on `http://localhost:9000`  |
-| `nom run build` | Build with [webpack](https://webpack.js.org/) and output to `wwwroot` directory |
-
-### MSBuild
-
-| Target       | Condition                               | Action                  |
-| ------------ | --------------------------------------- | ----------------------- |
-| Before Build | If there is no `node_modules` directory | `npm install`   |
-| Before Build | Always                                  | `npm run build` |
+Please reference the [contributing](docs/CONTRIBUTING.md) docs for more information.
