@@ -1,37 +1,37 @@
 {
   "icons": [
     {
-      "src": "/icon_512x512.f2c1886821e2857f46a42d82f16b8527.png",
+      "src": "/icon_512x512.8cde83bb7a4f261866ff2b82d70165ad.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/icon_192x192.c2a5b79aa25f8dc2418c14fe419a85c0.png",
+      "src": "/icon_192x192.a0f3e6a743859ff97f02606f2f936c47.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icon_144x144.45c31223bdc08c1fd07833e9d3a3b138.png",
+      "src": "/icon_144x144.74699e13d9e5c41f8ab9cee2c164d888.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/icon_96x96.272d1a99433e49d71cd4e9987b479600.png",
+      "src": "/icon_96x96.9d9836a7110ec0f799976fcb1144672d.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "/icon_72x72.27f29d3570fa1ee4db6463568155a00d.png",
+      "src": "/icon_72x72.f10aa5dae20682de8e1891c6192bbe9a.png",
       "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "/icon_48x48.449e4160783bf158e4ae75dbe27964c3.png",
+      "src": "/icon_48x48.ba63f4a2cdfda145b35786b5a37a4247.png",
       "sizes": "48x48",
       "type": "image/png"
     },
     {
-      "src": "/icon_36x36.4009b7989c0c36b1295f1e4e0c87dde4.png",
+      "src": "/icon_36x36.01c1fb508d22f355b04e39d121e32c29.png",
       "sizes": "36x36",
       "type": "image/png"
     }
