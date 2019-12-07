@@ -35,23 +35,23 @@ module.exports = (env, argv) => {
               ecma: 5,
               warnings: false,
               comparisons: false,
-              inline: 2
+              inline: 2,
             },
             parse: {
-              ecma: 8
+              ecma: 8,
             },
             mangle: { safari10: true },
             output: {
               ecma: 5,
               safari10: true,
               comments: false,
-              ascii_only: true
-            }
+              ascii_only: true,
+            },
           },
           parallel: true,
           sourceMap: false,
-          cache: true
-        })
+          cache: true,
+        }),
       ],
       splitChunks: {
         chunks: 'all',
@@ -67,7 +67,7 @@ module.exports = (env, argv) => {
             name: 'framework',
             chunks: 'all',
             test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
-            priority: 40
+            priority: 40,
           },
           lib: {
             test(module) {
@@ -75,22 +75,22 @@ module.exports = (env, argv) => {
             },
             priority: 30,
             minChunks: 1,
-            reuseExistingChunk: true
+            reuseExistingChunk: true,
           },
           commons: {
             name: 'commons',
             chunks: 'all',
-            priority: 20
+            priority: 20,
           },
           shared: {
             name: false,
             priority: 10,
             minChunks: 2,
-            reuseExistingChunk: true
-          }
-        }
+            reuseExistingChunk: true,
+          },
+        },
       },
-      runtimeChunk: true
+      runtimeChunk: true,
     },
     devServer: {
       contentBase: path.join(__dirname, 'wwwroot'),
@@ -105,7 +105,7 @@ module.exports = (env, argv) => {
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
-          use: 'babel-loader?cacheDirectory=true'
+          use: 'babel-loader?cacheDirectory=true',
         },
         {
           test: /\.css$/,
@@ -113,8 +113,8 @@ module.exports = (env, argv) => {
             'cache-loader',
             ExtractCssChunks.loader,
             'css-loader',
-            'clean-css-loader'
-          ]
+            'clean-css-loader',
+          ],
         },
         {
           test: /\.(jpe?g|png|webp|gif|svg|ico)$/i,
@@ -124,26 +124,26 @@ module.exports = (env, argv) => {
               loader: 'url-loader',
               options: {
                 limit: 8192,
-                fallback: 'file-loader?name="[path][name].[ext]"'
-              }
+                fallback: 'file-loader?name="[path][name].[ext]"',
+              },
             },
             {
               loader: 'img-loader',
               options: {
                 plugins: mode === 'production' && [
                   require('imagemin-mozjpeg')({
-                    progressive: true
+                    progressive: true,
                   }),
                   require('imagemin-pngquant')({
                     floyd: 0.5,
-                    speed: 5
+                    speed: 5,
                   }),
                   require('imagemin-webp'),
-                  require('imagemin-svgo')
-                ]
-              }
-            }
-          ]
+                  require('imagemin-svgo'),
+                ],
+              },
+            },
+          ],
         },
         {
           test: /\.(woff2|woff)$/,
@@ -153,12 +153,12 @@ module.exports = (env, argv) => {
               loader: 'file-loader',
               options: {
                 name: '[name].[ext]',
-                outputPath: 'fonts/'
-              }
-            }
-          ]
-        }
-      ]
+                outputPath: 'fonts/',
+              },
+            },
+          ],
+        },
+      ],
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -177,24 +177,24 @@ module.exports = (env, argv) => {
           keepClosingSlash: true,
           minifyJS: true,
           minifyCSS: true,
-          minifyURLs: true
-        }
+          minifyURLs: true,
+        },
       }),
       new ExtractCssChunks(
         {
           filename: '[name].css',
           chunkFilename: '[id].css',
-          hot: true
-        }
+          hot: true,
+        },
       ),
       new ScriptExtHtmlWebpackPlugin({
         prefetch: [/\.js$/],
-        defaultAttribute: 'async'
+        defaultAttribute: 'async',
       }),
       new HashedModuleIdsPlugin({
         hashFunction: 'sha256',
         hashDigest: 'hex',
-        hashDigestLength: 20
+        hashDigestLength: 20,
       }),
       new WebpackPwaManifest({
         name: 'React Core Boilerplate',
@@ -214,10 +214,10 @@ module.exports = (env, argv) => {
         swDest: 'sw.js',
         importWorkboxFrom: 'local',
         clientsClaim: true,
-        skipWaiting: true
+        skipWaiting: true,
       }),
       new HardSourceWebpackPlugin(),
-      new FriendlyErrorsWebpackPlugin()
-    ]
+      new FriendlyErrorsWebpackPlugin(),
+    ],
   };
 };
