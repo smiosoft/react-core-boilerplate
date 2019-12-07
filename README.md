@@ -1,10 +1,12 @@
-![React Core Boilerplate](./docs/.assets/project-title.png)
+# React Core Boilerplate
 
 [![Build Status](https://dev.azure.com/smiosoft/react-core-boilerplate/_apis/build/status/smiosoft.react-core-boilerplate?branchName=master)](https://dev.azure.com/smiosoft/react-core-boilerplate/_build/latest?definitionId=2&branchName=master)
 
----
+_Pre-configured solution for building a SPA with ASP.NET Core and React._
 
-_Preconfigured solution for building a SPA with ASP.NET Core and React._
+![React Core Boilerplate](./docs/.assets/project-title.png)
+
+![React Core Boilerplate Lighthouse Score](./docs/.assets/project-screenshot.png)
 
 ## Overview
 
@@ -22,7 +24,7 @@ _Preconfigured solution for building a SPA with ASP.NET Core and React._
 
 ### Prerequisites
 
-- [.NET Core](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [.NET Core](https://dotnet.microsoft.com/download/dotnet-core/)
 - [Node.js](https://nodejs.org/en/download/)
 
 ### Quick Start
