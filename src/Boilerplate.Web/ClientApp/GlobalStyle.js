@@ -2,9 +2,9 @@ import { createGlobalStyle } from 'styled-components';
 
 import 'modern-normalize/modern-normalize.css';
 
-import { PRIMARY } from './variables';
-import woff2 from '../../assets/fonts/open-sans-v16-latin-regular.woff2';
-import woff from '../../assets/fonts/open-sans-v16-latin-regular.woff';
+import { PRIMARY } from './utils/style/colours';
+import woff2 from '../wwwroot/fonts/open-sans-v16-latin-regular.woff2';
+import woff from '../wwwroot/fonts/open-sans-v16-latin-regular.woff';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -18,7 +18,6 @@ const GlobalStyle = createGlobalStyle`
       url('${woff2}') format('woff2'),
       url('${woff}') format('woff'); 
   }
-
   body {
     font-family: Open Sans, Segoe UI, Tahoma, sans-serif !important;
     background: ${PRIMARY.background};
@@ -26,6 +25,8 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeSpeed;
     word-wrap: break-word;
+    padding: 0;
+    margin: 0;
   }
 `;
 

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EB291C7C-A95D-4A99-833F-865E51BD2620}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Web", "src\Boilerplate.Web\Boilerplate.Web.csproj", "{D49EFC72-B58D-48DD-B78B-DCD0A390B39E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Web", "src\Boilerplate.Web\Boilerplate.Web.csproj", "{87EA0BA2-6155-4931-844C-08FCCF011E14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,16 +13,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D49EFC72-B58D-48DD-B78B-DCD0A390B39E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D49EFC72-B58D-48DD-B78B-DCD0A390B39E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D49EFC72-B58D-48DD-B78B-DCD0A390B39E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D49EFC72-B58D-48DD-B78B-DCD0A390B39E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87EA0BA2-6155-4931-844C-08FCCF011E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87EA0BA2-6155-4931-844C-08FCCF011E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87EA0BA2-6155-4931-844C-08FCCF011E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87EA0BA2-6155-4931-844C-08FCCF011E14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D49EFC72-B58D-48DD-B78B-DCD0A390B39E} = {EB291C7C-A95D-4A99-833F-865E51BD2620}
+		{87EA0BA2-6155-4931-844C-08FCCF011E14} = {EB291C7C-A95D-4A99-833F-865E51BD2620}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFD63F2D-6117-42F2-9544-749620D21926}
