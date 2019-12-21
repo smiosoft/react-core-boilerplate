@@ -10,6 +10,12 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: UseDotNet@2
+  displayName: 'Use .NET Core 3.1'
+  inputs:
+    packageType: 'sdk'
+    version: '3.1.x'
+
 - task: NuGetToolInstaller@1
   displayName: 'Install NuGet tool'
 
@@ -23,10 +29,11 @@ steps:
   inputs:
     command: 'publish'
     arguments: '--nologo --no-restore --configuration $(buildConfiguration) --output $(build.artifactStagingDirectory)'
+    zipAfterPublish: false
+    modifyOutputPath: true
 
 - task: PublishBuildArtifacts@1
   displayName: 'Save build artifacts'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
-    publishLocation: 'Container'
