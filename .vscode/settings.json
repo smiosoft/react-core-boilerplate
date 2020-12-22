@@ -1,0 +1,15 @@
+{
+	"terminal.integrated.cwd": "${cwd}\\src\\Boilerplate.Web",
+	"eslint.workingDirectories": [
+		{
+			"directory": "src\\Boilerplate.Web",
+			"changeProcessCWD": true
+		}
+	],
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"eslint.format.enable": true,
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+}
