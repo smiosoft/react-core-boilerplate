@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { PRIMARY, SECONDARY } from '../../utils/style/colours';
 import media from '../../utils/style/media';
+import Page from '../layout/Page';
 
 const Wrapper = styled.div`
   display: flex;
@@ -53,16 +54,18 @@ const Counter = () => {
   const [value, setValue] = useState(0);
 
   return (
-    <Wrapper>
-      <h1>Counter</h1>
-      <Section>
-        <Button type="button" onClick={() => setValue(value - 10)}>--</Button>
-        <Button type="button" onClick={() => setValue(value - 1)}>-</Button>
-        <Value>{value}</Value>
-        <Button type="button" onClick={() => setValue(value + 1)}>+</Button>
-        <Button type="button" onClick={() => setValue(value + 10)}>++</Button>
-      </Section>
-    </Wrapper>
+    <Page title="Counter">
+      <Wrapper>
+        <h1>Counter</h1>
+        <Section>
+          <Button type="button" onClick={() => setValue(value - 10)}>--</Button>
+          <Button type="button" onClick={() => setValue(value - 1)}>-</Button>
+          <Value>{value}</Value>
+          <Button type="button" onClick={() => setValue(value + 1)}>+</Button>
+          <Button type="button" onClick={() => setValue(value + 10)}>++</Button>
+        </Section>
+      </Wrapper>
+    </Page>
   );
 };
 
