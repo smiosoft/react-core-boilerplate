@@ -20,13 +20,17 @@
   },
   "settings": {
     "react": {
-      "version": "16.12"
+      "version": "17.0"
     }
   },
   "rules": {
     "linebreak-style": [
       "error",
       "windows"
+    ],
+    "max-len": [
+      "error",
+      { "code": 150 }
     ]
   },
   "overrides": [
