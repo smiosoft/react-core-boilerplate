@@ -1,23 +1,30 @@
-const presets = [
-  [
-    '@babel/preset-env',
-    {
-      targets: { esmodules: true },
-      corejs: 3,
+module.exports = (api) => {
+  api.cache.using(() => process.env.NODE_ENV);
+
+  const presets = [
+    ['@babel/preset-env', {
+      targets: {
+        esmodules: true,
+      },
+      corejs: '3.6',
       useBuiltIns: 'usage',
-    },
-  ],
-  ['@babel/preset-react'],
-];
-const plugins = [
-  [
-    'babel-plugin-styled-components',
-    {
+      bugfixes: true,
+    }],
+    '@babel/preset-react',
+  ];
+
+  const plugins = [
+    ['babel-plugin-styled-components', {
       minify: true,
       pure: true,
-    },
-  ],
-  ['react-hot-loader/babel'],
-];
+      ssr: false,
+      displayName: false,
+    }],
+  ];
 
-module.exports = { presets, plugins };
+  if (!api.env('production') && !api.env('test')) {
+    plugins.push(['react-refresh/babel']);
+  }
+
+  return { presets, plugins };
+};

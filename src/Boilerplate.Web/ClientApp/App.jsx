@@ -1,5 +1,4 @@
 import React from 'react';
-import { hot } from 'react-hot-loader/root';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
@@ -16,31 +15,16 @@ const Wrapper = styled.div`
   flex-wrap: nowrap;
 `;
 
-const App = () => {
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          // eslint-disable-next-line no-console
-          console.log('SW registered:', registration);
-        }).catch((error) => {
-          // eslint-disable-next-line no-console
-          console.log('SW registration failed:', error);
-        });
-    });
-  }
+const App = () => (
+  <Wrapper>
+    <Helmet titleTemplate="%s / React Core Boilerplate" defaultTitle="React Core Boilerplate" />
+    <GlobalStyle />
+    <BrowserRouter>
+      <Navbar />
+      <AppRouter />
+      <Footer />
+    </BrowserRouter>
+  </Wrapper>
+);
 
-  return (
-    <Wrapper>
-      <Helmet titleTemplate="%s / React Core Boilerplate" defaultTitle="React Core Boilerplate" />
-      <GlobalStyle />
-      <BrowserRouter>
-        <Navbar />
-        <AppRouter />
-        <Footer />
-      </BrowserRouter>
-    </Wrapper>
-  );
-};
-
-export default hot(App);
+export default App;
