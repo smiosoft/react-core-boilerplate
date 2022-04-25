@@ -21,6 +21,13 @@ module.exports = {
     publicPath: '/',
   },
   resolve: {
+    alias: {
+      '~assets': path.resolve(__dirname, 'ClientApp/assets/'),
+      '~components': path.resolve(__dirname, 'ClientApp/components/'),
+      '~redux': path.resolve(__dirname, 'ClientApp/redux/'),
+      '~style': path.resolve(__dirname, 'ClientApp/style/'),
+      '~utils': path.resolve(__dirname, 'ClientApp/utils/'),
+    },
     extensions: ['.js', '.jsx'],
   },
   optimization: {

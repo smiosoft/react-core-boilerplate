@@ -26,6 +26,9 @@
     }
   },
   "rules": {
-    "max-len": ["error", { "code": 150 }]
+    "linebreak-style": ["error", "windows"],
+    "max-len": ["error", { "code": 150 }],
+    "default-param-last": "off",
+    "no-restricted-exports": "off"
   }
 }
