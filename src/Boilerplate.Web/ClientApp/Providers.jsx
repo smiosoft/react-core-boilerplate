@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 import store from './redux/store';
 import ThemeProvider from './style/ThemeProvider';
@@ -19,9 +20,11 @@ function Providers({ children }) {
     <Provider store={store}>
       <ThemeProvider>
         <GlobalStyle />
-        <BrowserRouter>
-          {children}
-        </BrowserRouter>
+        <HelmetProvider>
+          <BrowserRouter>
+            {children}
+          </BrowserRouter>
+        </HelmetProvider>
       </ThemeProvider>
     </Provider>
   );

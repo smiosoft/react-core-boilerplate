@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 import Styles from './App.styles';
 import Loader from './components/shared/Loader';
