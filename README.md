@@ -8,8 +8,6 @@ _Pre-configured solution for building a single-page-application with ASP.NET Cor
 
 ## Overview
 
-[Live Demo](https://smiosoft.github.io/react-core-boilerplate)
-
 ### Features
 
 - Optimised Webpack configuration
