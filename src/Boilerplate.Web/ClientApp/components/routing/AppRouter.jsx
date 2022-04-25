@@ -1,6 +1,6 @@
 
 import React, { Suspense, lazy } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Loader from '../shared/Loader';
 
@@ -10,11 +10,11 @@ const NotFound = lazy(() => import(/* webpackChunkName: "not-found" */ '../pages
 
 const AppRouter = () => (
   <Suspense fallback={<Loader />}>
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/counter" component={Counter} />
-      <Route component={NotFound} />
-    </Switch>
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/counter" element={<Counter />} />
+      <Route element={<NotFound />} />
+    </Routes>
   </Suspense>
 );
 
