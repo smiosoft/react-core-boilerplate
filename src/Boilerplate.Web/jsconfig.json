@@ -8,6 +8,7 @@
     "paths": {
       "~assets/*": ["ClientApp/assets/*"],
       "~components/*": ["ClientApp/components/*"],
+      "~hooks/*": ["ClientApp/hooks/*"],
       "~redux/*": ["ClientApp/redux/*"],
       "~style/*": ["ClientApp/style/*"],
       "~utils/*": ["ClientApp/utils/*"],

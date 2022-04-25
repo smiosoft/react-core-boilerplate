@@ -24,6 +24,7 @@ module.exports = {
     alias: {
       '~assets': path.resolve(__dirname, 'ClientApp/assets/'),
       '~components': path.resolve(__dirname, 'ClientApp/components/'),
+      '~hooks': path.resolve(__dirname, 'ClientApp/hooks/'),
       '~redux': path.resolve(__dirname, 'ClientApp/redux/'),
       '~style': path.resolve(__dirname, 'ClientApp/style/'),
       '~utils': path.resolve(__dirname, 'ClientApp/utils/'),

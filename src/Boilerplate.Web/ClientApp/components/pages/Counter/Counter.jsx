@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Page from '~components/layout/Page';
+import useCounter from '~hooks/useCounter';
 import Styles from './Counter.styles';
 
 function Counter() {
-  const [value, setValue] = useState(0);
+  const counter = useCounter(0);
 
   return (
     <Page title="Counter">
       <Styles.Wrapper>
         <h1>Counter</h1>
         <Styles.Section>
-          <Styles.Button type="button" onClick={() => setValue(value - 10)}>--</Styles.Button>
-          <Styles.Button type="button" onClick={() => setValue(value - 1)}>-</Styles.Button>
-          <Styles.Value>{value}</Styles.Value>
-          <Styles.Button type="button" onClick={() => setValue(value + 1)}>+</Styles.Button>
-          <Styles.Button type="button" onClick={() => setValue(value + 10)}>++</Styles.Button>
+          <Styles.Button type="button" onClick={() => counter.decreaseBy(10)}>--</Styles.Button>
+          <Styles.Button type="button" onClick={() => counter.decreaseBy(1)}>-</Styles.Button>
+          <Styles.Value>{counter.value}</Styles.Value>
+          <Styles.Button type="button" onClick={() => counter.increaseBy(1)}>+</Styles.Button>
+          <Styles.Button type="button" onClick={() => counter.increaseBy(10)}>++</Styles.Button>
         </Styles.Section>
       </Styles.Wrapper>
     </Page>
