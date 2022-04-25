@@ -9,6 +9,7 @@ const Wrapper = styled.div`
 
 const Emoji = styled.div`
   font-size: 10rem;
+  user-select: none;
   cursor: pointer;
 `;
 
