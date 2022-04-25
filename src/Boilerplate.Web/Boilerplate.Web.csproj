@@ -1,18 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <PackageId>Boilerplate.Web</PackageId>
     <Version>1.0.0</Version>
     <Authors>Nick Smirnoff, Andi Elliott</Authors>
     <Company>Smiosoft</Company>
     <Product>Boilerplate.Web</Product>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <DefaultItemExcludes>$(DefaultItemExcludes);node_modules\**</DefaultItemExcludes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="6.0.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,7 +22,7 @@
     <None Remove="node_modules\**" />
   </ItemGroup>
 
-  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('node_modules') ">
+  <Target Name="EnsureNodeInstall" BeforeTargets="Build" Condition="!Exists('node_modules')">
     <Exec Command="node --version" ContinueOnError="true">
       <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
     </Exec>
@@ -29,18 +31,8 @@
     <Exec Command="npm install" />
   </Target>
 
-  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
-    <Exec Command="npm install" />
+  <Target Name="WebpackBuild" BeforeTargets="Build">
     <Exec Command="npm run build" />
-
-    <ItemGroup>
-      <DistFiles Include="wwwroot\**" CopyToPublishDirectory="Always" />
-      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
-        <RelativePath>%(DistFiles.Identity)</RelativePath>
-        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      </ResolvedFileToPublish>
-    </ItemGroup>
   </Target>
 
 </Project>

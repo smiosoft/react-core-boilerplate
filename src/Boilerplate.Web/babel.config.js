@@ -1,30 +1,13 @@
 module.exports = (api) => {
   api.cache.using(() => process.env.NODE_ENV);
-
-  const presets = [
-    ['@babel/preset-env', {
-      targets: {
-        esmodules: true,
-      },
-      corejs: '3.6',
-      useBuiltIns: 'usage',
-      bugfixes: true,
-    }],
-    '@babel/preset-react',
-  ];
-
-  const plugins = [
-    ['babel-plugin-styled-components', {
-      minify: true,
-      pure: true,
-      ssr: false,
-      displayName: false,
-    }],
-  ];
-
-  if (!api.env('production') && !api.env('test')) {
-    plugins.push(['react-refresh/babel']);
-  }
-
-  return { presets, plugins };
+  return {
+    presets: [
+      '@babel/preset-env',
+      ['@babel/preset-react', { development: !api.env('production'), runtime: 'automatic' }],
+    ],
+    plugins: [
+      '@babel/plugin-transform-runtime',
+      (!api.env('production') && ['react-refresh/babel']),
+    ].filter(Boolean),
+  };
 };

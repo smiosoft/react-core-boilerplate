@@ -1,8 +1,6 @@
 {
-  "parser": "babel-eslint",
-  "plugins": [
-    "react"
-  ],
+  "parser": "@babel/eslint-parser",
+  "plugins": ["react"],
   "extends": [
     "airbnb",
     "airbnb/hooks"
@@ -19,26 +17,18 @@
     }
   },
   "settings": {
+    "import/resolver": {
+      "node": {},
+      "webpack": {}
+    },
     "react": {
-      "version": "17.0"
+      "version": "detect"
     }
   },
   "rules": {
-    "linebreak-style": [
-      "error",
-      "windows"
-    ],
-    "max-len": [
-      "error",
-      { "code": 150 }
-    ]
-  },
-  "overrides": [
-    {
-      "files": ["webpack.config.js"],
-      "rules": {
-        "global-require": "off"
-      }
-    }
-  ]
+    "linebreak-style": ["error", "windows"],
+    "max-len": ["error", { "code": 150 }],
+    "default-param-last": "off",
+    "no-restricted-exports": "off"
+  }
 }

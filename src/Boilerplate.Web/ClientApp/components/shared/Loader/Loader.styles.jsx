@@ -1,4 +1,3 @@
-import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const progress = keyframes`
@@ -31,10 +30,4 @@ const ProgressLine = styled.div`
   }
 `;
 
-const Loader = () => (
-  <Wrapper>
-    <ProgressLine />
-  </Wrapper>
-);
-
-export default Loader;
+export default { Wrapper, ProgressLine };

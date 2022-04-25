@@ -8,8 +8,6 @@ _Pre-configured solution for building a single-page-application with ASP.NET Cor
 
 ## Overview
 
-[Live Demo](https://smiosoft.github.io/react-core-boilerplate)
-
 ### Features
 
 - Optimised Webpack configuration
@@ -23,7 +21,7 @@ _Pre-configured solution for building a single-page-application with ASP.NET Cor
 
 ### Prerequisites
 
-- [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/)
+- [.NET Core 6](https://dotnet.microsoft.com/download/dotnet-core/)
 - [Node.js](https://nodejs.org/en/download/)
 
 ### Quick Start
